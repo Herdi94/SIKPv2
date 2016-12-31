@@ -1,0 +1,11 @@
+[19-Oct-2016 17:04:40] PHP Parse error:  syntax error, unexpected T_PUBLIC in /home/abdk7514/public_html/sikp/application/libraries/Template.php on line 3
+[19-Oct-2016 17:10:53] PHP Fatal error:  Call to a member function login() on a non-object in /home/abdk7514/public_html/sikp/application/controllers/Dashboard.php on line 38
+[19-Oct-2016 19:23:29] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:29:17] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:30:42] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:32:23] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:36:02] PHP Fatal error:  Class 'Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:41:51] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:44:24] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:44:27] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
+[19-Oct-2016 19:45:43] PHP Fatal error:  Class 'CI_Router' not found in /home/abdk7514/public_html/sikp/application/core/Router.php on line 3
