@@ -17,16 +17,20 @@
 
     <!--start datepicker -->
 
-    <link rel="stylesheet" href="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material.min.css" />
-    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap-datepicker/css/bootstrap-material-datetimepicker.css')?>" />
+    <link rel="stylesheet"
+          href="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/css/material.min.css"/>
+    <link rel="stylesheet"
+          href="<?php echo base_url('assets/bootstrap-datepicker/css/bootstrap-material-datetimepicker.css') ?>"/>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
     <!--datepicker -->
-    <script type="text/javascript" src="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/js/material.min.js"></script>
+    <script type="text/javascript"
+            src="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/js/material.min.js"></script>
     <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url('assets/bootstrap-datepicker/js/bootstrap-material-datetimepicker.js')?>"></script>
+    <script type="text/javascript"
+            src="<?php echo base_url('assets/bootstrap-datepicker/js/bootstrap-material-datetimepicker.js') ?>"></script>
     <!--end datepicker -->
 
     <!--Form Bootstrap -->
@@ -72,7 +76,8 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#page-top">Home</a>
@@ -106,13 +111,14 @@
 </nav>
 
 
-
 <!-- Header -->
 <header>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" src="<?php echo base_url('assets/images/jabar.png') ?>" alt="" width="12%" height="10">
+                <img class="img-responsive" src="<?php echo base_url('assets/images/jabar.png') ?>" alt="" width="12%"
+                     height="10">
+
                 <div class="intro-text">
                     <span class="name">Home</span>
                     <hr class="star-light">
@@ -122,24 +128,35 @@
                     <table border=1 width=60% align="center">
                         <div align="center">
                             <hr>
-                            <p align="justify"><font size="3" color="black">Ini merupakan layanan sistem informasi mengenai kerja praktek yang dapat anda lakukan secara online, mengenai proses pengajuan kerja praktek di Dinas KOMINFO Provinsi Jawa Barat. Dalam memaksimalkan pelayanan sistem informasi. Kami memberikan kemudahan bagi anda sebagai Mahasiswa dan Pelajar SMK dalam mendapatkan informasi mengenai kerja praktek di Dinas KOMINFO Provinsi Jawa Barat.<br><br>
+                            <p align="justify"><font size="3" color="black">Ini merupakan layanan sistem informasi
+                                    mengenai kerja praktek yang dapat anda lakukan secara online, mengenai proses
+                                    pengajuan kerja praktek di Dinas KOMINFO Provinsi Jawa Barat. Dalam memaksimalkan
+                                    pelayanan sistem informasi. Kami memberikan kemudahan bagi anda sebagai Mahasiswa
+                                    dan Pelajar SMK dalam mendapatkan informasi mengenai kerja praktek di Dinas KOMINFO
+                                    Provinsi Jawa Barat.<br><br>
 
                                     Fitur-fitur yang tersedia dalam Kerja Praktek Online :<br></font></p>
 
                             <ul>
-                                <li><p align="left"><font size="3" color="black">Melakukan pendaftaran Kerja Praktek secara online</font></p></li>
-                                <li><p align="left"><font size="3" color="black">Dapat menentukan kerja praktek secara mandiri ataupun kelompok</font></p></li>
+                                <li><p align="left"><font size="3" color="black">Melakukan pendaftaran Kerja Praktek
+                                            secara online</font></p></li>
+                                <li><p align="left"><font size="3" color="black">Dapat menentukan kerja praktek secara
+                                            mandiri ataupun kelompok</font></p></li>
                             </ul>
                             <br>
 
                             <p align="left"><font size="3" color="black">
-                                    Silakan lakukan pendaftaran kerja praktek Anda Di Kominfo Provinsi Jawa Barat dengan memenuhi syarat-syarat yang ditentukan :<br></font></p>
+                                    Silakan lakukan pendaftaran kerja praktek Anda Di Kominfo Provinsi Jawa Barat dengan
+                                    memenuhi syarat-syarat yang ditentukan :<br></font></p>
 
 
                             <ul>
-                                <li><p align="left"><font size="3" color="black">Mengisi formulir data diri</font></p></li>
-                                <li><p align="left"><font size="3" color="black">Mengisi rencana waktu kerja praktek</font></p></li>
-                                <li><p align="left"><font size="3" color="black">Melampirkan surat keterangan kerja praktek/PKL yang sudah di scan, format image : jpeg/jpg/dll</font></p></li>
+                                <li><p align="left"><font size="3" color="black">Mengisi formulir data diri</font></p>
+                                </li>
+                                <li><p align="left"><font size="3" color="black">Mengisi rencana waktu kerja
+                                            praktek</font></p></li>
+                                <li><p align="left"><font size="3" color="black">Melampirkan surat keterangan kerja
+                                            praktek/PKL yang sudah di scan, format image : jpeg/jpg/dll</font></p></li>
                             </ul>
 
 
@@ -152,8 +169,6 @@
         </div>
     </div>
 </header>
-
-
 
 
 <!-- Portfolio Grid Section -->
@@ -192,7 +207,6 @@
         </div>
 
 
-
         <div class="col-sm-4 middle-border"></div>
 
         <div class="col-sm-5">
@@ -200,8 +214,16 @@
             <!--muncul notifikasi hasil dari submit -->
             <p><?php
                 $this->load->library('session');
-                echo $this->session->flashdata('success_msg');
-                echo $this->session->flashdata('error_msg'); ?></p>
+                if ($this->session->flashdata('success_msg')) {
+                    echo $this->session->flashdata('success_msg');
+                } else if ($this->session->flashdata('error_msg')) {
+                    echo $this->session->flashdata('error_msg');
+                } else if ($this->session->flashdata('error')) {
+                    echo $this->session->flashdata('error');
+                }
+
+                ?>
+            </p>
 
             <div class="form-box">
                 <div class="form-top">
@@ -215,7 +237,9 @@
                     </div>
                 </div>
                 <div class="form-bottom">
-                    <form role="form" action="<?php echo site_url('pengaju/welcome/add_pendaftaran')?>" method="post" class="registration-form" enctype="multipart/form-data">
+                    <form role="form" action="<?php echo site_url('pengaju/welcome/add_pendaftaran') ?>" method="post"
+                          id="form"
+                          class="registration-form" enctype="multipart/form-data">
 
                         <div class="row">
                             <div class="container">
@@ -224,14 +248,14 @@
 
                                     <div class="form-group">
                                         <?php echo form_label('NIM/NIS', ''); ?>
-                                        <?php echo form_input('no_identitas', set_value('no_identitas'), array("class" => "form-control", "id" => "no_identitas","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan masukkan NIM/NIS anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_input('no_identitas', set_value('no_identitas'), array("class" => "form-control", "id" => "no_identitas", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan masukkan NIM/NIS anda.')", "oninput" => "setCustomValidity('')"));
                                         //echo form_input('no_identitas', set_value('no_identitas'), array("class" => "form-control", "id" => "no_identitas")); ?>
                                     </div>
 
 
                                     <div class="form-group">
                                         <?php echo form_label('Nama', ''); ?>
-                                        <?php echo form_input('nama2', set_value('nama'), array("class" => "form-control",  "id" => "nama","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan masukkan nama anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_input('nama2', set_value('nama'), array("class" => "form-control", "id" => "nama", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan masukkan nama anda.')", "oninput" => "setCustomValidity('')"));
                                         //echo form_input('nama2', set_value('nama'), array("class" => "form-control",  "id" => "nama")); ?>
                                     </div>
 
@@ -242,13 +266,13 @@
                                             "L" => "Laki-laki",
                                             "P" => "Perempuan"
                                         ); ?>
-                                        <?php  echo form_dropdown('jk', $option, set_value('jk'), array("id" => "jk", "class" => "form-control","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan pilih jenis kelamin anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_dropdown('jk', $option, set_value('jk'), array("id" => "jk", "class" => "form-control", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan pilih jenis kelamin anda.')", "oninput" => "setCustomValidity('')"));
                                         // echo form_dropdown('jk', $option, set_value('jk'), array("id" => "jk", "class" => "form-control")); ?>
                                     </div>
 
                                     <div class="form-group">
                                         <?php echo form_label('Email', ''); ?>
-                                        <?php  echo form_input('email', set_value('email'), array("class" => "form-control", "id" => "email","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan masukkan email anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_input('email', set_value('email'), array("class" => "form-control", "id" => "email", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan masukkan email anda.')", "oninput" => "setCustomValidity('')"));
                                         // echo form_input('email', set_value('email'), array("class" => "form-control", "id" => "email")); ?>
                                     </div>
 
@@ -259,7 +283,7 @@
                                             "Personal" => "Personal",
                                             "Kelompok" => "Kelompok"
                                         ); ?>
-                                        <?php  echo form_dropdown('jns_pengaju', $option, set_value('jns_pengaju'), array("id" => "jns_pengaju", "class" => "form-control","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan pilih jenis pengaju anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_dropdown('jns_pengaju', $option, set_value('jns_pengaju'), array("id" => "jns_pengaju", "class" => "form-control", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan pilih jenis pengaju anda.')", "oninput" => "setCustomValidity('')"));
                                         // echo form_dropdown('jns_pengaju', $option, set_value('jns_pengaju'), array("id" => "jns_pengaju", "class" => "form-control")); ?>
                                     </div>
 
@@ -287,21 +311,21 @@ Format: (nim nama) -> 10113732 Herdi Zulfiqri, 10346789 Bagus Rajo
                                             "S-1" => "S-1",
                                             "S-2" => "S-2"
                                         ); ?>
-                                        <?php echo form_dropdown('pendidikan', $option, set_value('pendidikan'), array("class" => "form-control", "id" => "pendidikan","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan masukkan pendidikan anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_dropdown('pendidikan', $option, set_value('pendidikan'), array("class" => "form-control", "id" => "pendidikan", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan masukkan pendidikan anda.')", "oninput" => "setCustomValidity('')"));
                                         // echo form_dropdown('pendidikan', $option, set_value('pendidikan'), array("class" => "form-control", "id" => "pendidikan")); ?>
                                     </div>
 
 
                                     <div class="form-group">
                                         <?php echo form_label('Jurusan', ''); ?>
-                                        <?php  echo form_input('jurusan', set_value('jurusan'), array( "id" => "jurusan", "class" => "form-control","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan masukkan jurusan anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_input('jurusan', set_value('jurusan'), array("id" => "jurusan", "class" => "form-control", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan masukkan jurusan anda.')", "oninput" => "setCustomValidity('')"));
                                         // echo form_input('jurusan', set_value('jurusan'), array( "id" => "jurusan", "class" => "form-control")); ?>
                                     </div>
 
 
                                     <div class="form-group">
                                         <?php echo form_label('Sekolah/Universitas', ''); ?>
-                                        <?php  echo form_input('sekolah', set_value('sekolah'), array("class" => "form-control", "id" => "sekolah","required"=>"required","oninvalid"=>"this.setCustomValidity('Silahkan masukkan sekolah/universitas anda.')","oninput"=>"setCustomValidity('')"));
+                                        <?php echo form_input('sekolah', set_value('sekolah'), array("class" => "form-control", "id" => "sekolah", "required" => "required", "oninvalid" => "this.setCustomValidity('Silahkan masukkan sekolah/universitas anda.')", "oninput" => "setCustomValidity('')"));
                                         // echo form_input('sekolah', set_value('sekolah'), array("class" => "form-control", "id" => "sekolah")); ?>
                                     </div>
 
@@ -309,7 +333,7 @@ Format: (nim nama) -> 10113732 Herdi Zulfiqri, 10346789 Bagus Rajo
                                     <!-- to datepicker -->
 
                                     <script type="text/javascript">
-                                        $(document).ready(function() {
+                                        $(document).ready(function () {
                                             $('#datepicker1').bootstrapMaterialDatePicker
                                             ({
                                                 time: false,
@@ -333,6 +357,7 @@ Format: (nim nama) -> 10113732 Herdi Zulfiqri, 10346789 Bagus Rajo
                                         <div class="form-group">
                                             <?php echo form_label('Pada Tanggal', ''); ?>
                                             <br>
+
                                             <div class="col-sm-8">
 
                                                 <div class="input-group">
@@ -340,7 +365,7 @@ Format: (nim nama) -> 10113732 Herdi Zulfiqri, 10346789 Bagus Rajo
                                                         <i class="fa fa-calendar">
                                                         </i>
                                                     </div>
-                                                    <?php echo form_input('tgl_mulai', set_value('tgl_mulai'), array("class" => "form-control floating-label", "id" => "datepicker1","required"=>"","placeholder"=>"YYYY-MM-DD"));?>
+                                                    <?php echo form_input('tgl_mulai', set_value('tgl_mulai'), array("class" => "form-control floating-label", "id" => "datepicker1", "required" => "", "placeholder" => "YYYY-MM-DD")); ?>
 
                                                 </div>
 
@@ -352,6 +377,7 @@ Format: (nim nama) -> 10113732 Herdi Zulfiqri, 10346789 Bagus Rajo
                                             <br>
                                             <?php echo form_label('Berakhir Tanggal', ''); ?>
                                             <br>
+
                                             <div class="col-sm-8">
 
                                                 <div class="input-group">
@@ -359,7 +385,7 @@ Format: (nim nama) -> 10113732 Herdi Zulfiqri, 10346789 Bagus Rajo
                                                         <i class="fa fa-calendar">
                                                         </i>
                                                     </div>
-                                                    <?php echo form_input('tgl_akhir', set_value('tgl_akhir'), array("class" => "form-control floating-label", "id" => "datepicker2","required"=>"","placeholder"=>"YYYY-MM-DD"));?>
+                                                    <?php echo form_input('tgl_akhir', set_value('tgl_akhir'), array("class" => "form-control floating-label", "id" => "datepicker2", "required" => "", "placeholder" => "YYYY-MM-DD")); ?>
 
                                                 </div>
 
@@ -415,7 +441,12 @@ c. 3 bulan contoh : 2016-10-10 - 2017-01-10<br>', ''); ?>
                                             <input type="file"
                                                    onchange="tampilkanPreview(this,'preview')"
                                                    name="photo"
-                                                   required="" />
+                                                />
+                                            <?php
+                                            if ($this->session->flashdata('error')) {
+                                                echo $this->session->flashdata('error');
+                                            }
+                                            ?>
 
 
                                             <br>
@@ -432,9 +463,7 @@ c. 3 bulan contoh : 2016-10-10 - 2017-01-10<br>', ''); ?>
 </div>
 
 
-
 </div>
-
 
 
 <!--end form pendaftaran-->
@@ -530,7 +559,6 @@ c. 3 bulan contoh : 2016-10-10 - 2017-01-10<br>', ''); ?>
 
 <!-- Theme JavaScript -->
 <script src="<?php echo base_url('assets/startbootstrap_freelancer/js/freelancer.min.js') ?>"></script>
-
 
 
 </body>

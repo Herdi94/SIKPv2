@@ -99,4 +99,9 @@ class Pembimbing_model extends CI_Model{
         return $this->db->insert_id();
     }
 
+    public function update($where, $data){
+        $this->db->update($this->table, $data,$where);
+        return $this->db->affected_rows();
+    }
+
 }

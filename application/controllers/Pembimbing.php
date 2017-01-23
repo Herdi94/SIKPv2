@@ -9,7 +9,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller
+class Pembimbing extends CI_Controller
 {
     public function __construct()
     {
@@ -17,43 +17,32 @@ class Dashboard extends CI_Controller
         $this->load->library('session');
     }
 
-    public function home()
-    {
-        $this->template->load('admin/template', 'admin/home_view');
-        session_write_close();
+public function home(){
+    $this->template->load('pembimbing/template','pembimbing/home_view');
+    session_write_close();
+}
+
+    public function edit_profile(){
+        $this->template->load('pembimbing/template','pembimbing/profile_view');
+session_write_close();
     }
 
-    public function pembimbing()
-    {
-        $this->template->load('admin/template', 'admin/pembimbing_view');
+    public function pendaftaran(){
+        $this->template->load('pembimbing/template','pembimbing/pendaftaran_view');
         session_write_close();
     }
-
-    public function pendaftaran()
-    {
-        $this->template->load('admin/template', 'admin/pendaftaran_view');
-        session_write_close();
-    }
-
-    public function profile()
-    {
-        $this->template->load('admin/template','admin/profile_view');
-        session_write_close();
-
-    }
-
     public function index($error = NULL)
     {
         $data = array(
-            'action' => site_url('dashboard/login'),
+            'action' => site_url('pembimbing/login'),
             'error' => $error
         );
-        $this->load->view('admin/login_view', $data);
+        $this->load->view('pembimbing/login_view', $data);
     }
 
     public function login()
     {
-        $this->load->model('admin/auth_model');
+        $this->load->model('pembimbing/auth_model');
         $login = $this->auth_model->login($this->input->post('username'), sha1($this->input->post('password')));
 
 
@@ -64,10 +53,13 @@ class Dashboard extends CI_Controller
 //          daftarkan session
             $data = array(
                 'logged' => TRUE,
-                'id_admin'=> $row->id_admin,
+
+                'id_pembimbing'=> $row->id_pembimbing,
                 'username' => $row->username,
                 'nama' => $row->nama,
                 'nip' => $row->nip,
+                'bidang' => $row->bidang,
+                'jabatan' => $row->jabatan,
                 'email' => $row->email,
                 'photo' => $row->photo
 
@@ -75,7 +67,7 @@ class Dashboard extends CI_Controller
 
             $this->session->set_userdata($data);
 
-            $this->template->load('admin/template', 'admin/home_view');
+            $this->template->load('pembimbing/template', 'pembimbing/home_view');
 
         } else {
 //            tampilkan pesan error
@@ -90,7 +82,7 @@ class Dashboard extends CI_Controller
         $this->session->sess_destroy();
 
 //        redirect ke halaman login
-        redirect(site_url('dashboard'));
+        redirect(site_url('pembimbing'));
     }
 
 

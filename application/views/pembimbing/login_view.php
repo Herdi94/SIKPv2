@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Sign In | Kerja Praktek Online | Admin</title>
+    <title>Sign In | Kerja Praktek Online | Pembimbing</title>
 
     <!-- Favicon-->
     <link rel="icon" href="<?php echo base_url('assets/images/jabar.png')?>" type="image/x-icon">
@@ -31,11 +31,11 @@
 
 </head>
 
-<body class="login-page">
+<body class="login-pembimbing">
 
 <div class="login-box">
     <div class="logo">
-        <a href="javascript:void(0);"><font size="5px">Kerja Praktek Online - </font><font size="4px">Admin</font> </a>
+        <a href="javascript:void(0);"><font size="5px">Kerja Praktek Online - </font><font size="4px">Pembimbing</font> </a>
     </div>
     <div class="card">
         <div class="body">
@@ -63,7 +63,7 @@
                         <!--to set remember me -->
                     </div>
                     <div class="col-xs-4">
-                        <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                        <button class="btn btn-block bg-deep-purple waves-effect" type="submit">SIGN IN</button>
                     </div>
                 </div>
                 <div class="msg"><?php echo $error; ?></div>

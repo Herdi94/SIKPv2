@@ -16,7 +16,7 @@
 
 
 
-<!--            <link href="--><?php //echo base_url('assets/bootstrap-datepicker1/css/bootstrap-datepicker3.min.css')?><!--" rel="stylesheet">-->
+            <!--            <link href="--><?php //echo base_url('assets/bootstrap-datepicker1/css/bootstrap-datepicker3.min.css')?><!--" rel="stylesheet">-->
 
             <link href="<?php echo base_url('assets/datatables/media/css/dataTables.bootstrap.css')?>" rel="stylesheet">
             <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -64,7 +64,7 @@
             <script src="<?php echo base_url('assets/startbootstrap_freelancer/js/jquery-2.1.4.min.js')?>"></script><!--penting-->
             <script src="<?php echo base_url('assets/datatables/media/js/jquery.dataTables.min.js')?>"></script><!--penting-->
             <script src="<?php echo base_url('assets/datatables/media/js/dataTables.bootstrap.js')?>"></script>
-<!--            <script src="--><?php //echo base_url('assets/bootstrap-datepicker1/js/bootstrap-datepicker.min.js')?><!--"></script>-->
+            <!--            <script src="--><?php //echo base_url('assets/bootstrap-datepicker1/js/bootstrap-datepicker.min.js')?><!--"></script>-->
 
 
             <script type="text/javascript">
@@ -109,94 +109,33 @@
 
 
                     /*datepicker
-                    $('.datepicker').datepicker({
-                        autoclose: true,
-                        format: "yyyy-mm-dd",
-                        todayHighlight: true,
-                        orientation: "top auto",
-                        todayBtn: true,
-                        todayHighlight: true,
-                    });
+                     $('.datepicker').datepicker({
+                     autoclose: true,
+                     format: "yyyy-mm-dd",
+                     todayHighlight: true,
+                     orientation: "top auto",
+                     todayBtn: true,
+                     todayHighlight: true,
+                     });
 
-                    //set input/textarea/select event when change value, remove class error and remove text help block
-                    $("input").change(function(){
-                        $(this).parent().parent().removeClass('has-error');
-                        $(this).next().empty();
-                    });
-                    $("textarea").change(function(){
-                        $(this).parent().parent().removeClass('has-error');
-                        $(this).next().empty();
-                    });
-                    $("select").change(function(){
-                        $(this).parent().parent().removeClass('has-error');
-                        $(this).next().empty();
-                    }); */
+                     //set input/textarea/select event when change value, remove class error and remove text help block
+                     $("input").change(function(){
+                     $(this).parent().parent().removeClass('has-error');
+                     $(this).next().empty();
+                     });
+                     $("textarea").change(function(){
+                     $(this).parent().parent().removeClass('has-error');
+                     $(this).next().empty();
+                     });
+                     $("select").change(function(){
+                     $(this).parent().parent().removeClass('has-error');
+                     $(this).next().empty();
+                     }); */
 
                 });
 
 
                 <!--end date picker-->
-
-
-                function disetujui()
-                {
-
-                    //$("#btnSetuju").text("Ditolak");
-
-
-                    if ($("#btnSetuju").text("Ditolak"))
-                    {
-                        $("#btnSetuju").text("ditolak");
-                    }
-
-                    if ($("#btnSetuju").text("Ditolak"))
-                    {
-                        $("#btnSetuju").text("diterima");
-                    }
-
-                    //$("#btnSetuju").text("Diterima");
-
-                    /*
-                    $('#btnSetuju').text('saving...'); //change button text
-                    $('#btnSetuju').attr('disabled', false); //set button disable
-
-                    var url;
-
-                    /*
-                    if (save_method == 'edit') {
-                        url = "<?php // echo site_url('admin/admin/ajax_update_profile')?>";
-                    }
-*/
-                    // ajax adding data to database
-/*
-                    var formData = new FormData($('#form')[0]);
-                    $.ajax({
-                        url: url,
-                        type: "POST",
-                        data: formData,
-                        contentType: false,
-                        processData: false,
-                        dataType: "JSON",
-                        success: function (data) {
-
-                            if (data.status)
-                            {
-                               // $('#modal_form').modal('hide');
-                            }
-
-                            $('#btnSetuju').text('save'); //change button text
-                            $('#btnSetuju').attr('disabled', false); //set button enable
-
-
-                        },
-
-                        $('#btnSetuju').text('save'); //change button text
-                    $('#btnSetuju').attr('disabled', false); //set button enable
-
-
-                    });
-*/
-                }
 
 
 
@@ -214,8 +153,8 @@
 
                     //Ajax Load data from ajax
                     $.ajax({
-                        url : "<?php echo site_url('admin/pendaftaran/detail_pengaju')?>/" + kode_pengajuan,
                         type: "GET",
+                        url : "<?php echo site_url('admin/pendaftaran/detail_pengaju')?>/" + kode_pengajuan,
                         dataType: "JSON",
                         success: function(data)
                         {
@@ -279,7 +218,7 @@
 
 
 
-</script>
+            </script>
 
 
 
@@ -297,7 +236,7 @@
                                 <div class="form-body">
 
                                     <div class="form-group">
-                        <label class="control-label col-md-3">No:</label>
+                                        <label class="control-label col-md-3">No:</label>
                                         <div class="col-md-9">
 
                                             <input name="kode_pengajuan" class="form-control" type="text" disabled>

@@ -58,20 +58,19 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card">
                     <div class="header">
-                        <h2>Selamat Datang di Kerja Praktek Online - Admin</h2>
+                        <h2>Selamat Datang di Kerja Praktek Online - Pembimbing</h2>
 
                         <table border=1 width=60% align="center">
                             <div align="center">
                                 <hr>
-                                <p align="justify"><font size="3" color="black">Ini merupakan layanan sistem informasi mengenai kerja praktek yang dapat anda lakukan secara online, mengenai proses pengolahan data kerja praktek di Dinas KOMINFO Provinsi Jawa Barat. Dalam memaksimalkan pelayanan sistem informasi. Kami memberikan kemudahan bagi anda sebagai Admin dalam mendapatkan informasi mengenai kerja praktek di Dinas KOMINFO Provinsi Jawa Barat.<br><br>
+                                <p align="justify"><font size="3" color="black">Ini merupakan layanan sistem informasi mengenai kerja praktek yang dapat anda lakukan secara online, mengenai proses persetujuan peserta kerja praktek di Dinas KOMINFO Provinsi Jawa Barat. Dalam memaksimalkan pelayanan sistem informasi. Kami memberikan kemudahan bagi anda sebagai Pembimbing dalam mendapatkan informasi mengenai kerja praktek di Dinas KOMINFO Provinsi Jawa Barat.<br><br>
 
-                                        Fitur-fitur yang tersedia dalam Kerja Praktek Online - Admin : <br></font></p>
+                                        Fitur-fitur yang tersedia dalam Kerja Praktek Online - Pembimbing : <br></font></p>
 
                                 <ul>
 
                                     <li><p align="left"><font size="3" color="black">Mengetahui total pembimbing, total pendaftaran, total disetujui dan total ditolak. </font></p></li>
-                                    <li><p align="left"><font size="3" color="black">Mengolah data pembimbing</font></p></li>
-                                    <li><p align="left"><font size="3" color="black">Menambahkan akun pembimbing untuk diakses di Kerja Praktek Online - Pembimbing</font></p></li>
+                                    <li><p align="left"><font size="3" color="black">Menyetujui peserta kerja praktek</font></p></li>
                                     <li><p align="left"><font size="3" color="black">Mengetahui history data pendaftaran</font></p></li>
                                 </ul>
                                 <br>

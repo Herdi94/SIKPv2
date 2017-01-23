@@ -10,11 +10,13 @@ class Welcome extends CI_Controller
         $this->load->model('pengaju/welcome_model');
         $this->load->helper('form');
         $this->load->library('session');
+
     }
 
     public function index()
     {
         $this->load->view('pengaju/template');
+
     }
 
 
@@ -41,7 +43,11 @@ class Welcome extends CI_Controller
             if (!empty($_FILES['photo']['name'])) {
                 $config['upload_path'] = 'upload/';
                 $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                $config['max_size']             = '5120';
                 $config['file_name'] = $_FILES['photo']['name'];
+
+                //load form validation
+                $this->load->library('form_validation');
 
                 //Load upload library and initialize configuration
                 $this->load->library('upload', $config);
@@ -51,7 +57,9 @@ class Welcome extends CI_Controller
                     $uploadData = $this->upload->data();
                     $picture = $uploadData['file_name'];
                 } else {
-                    $picture = '';
+                   $error = array('error' => $this->upload->display_errors());
+                    $this->session->set_flashdata('error',$error['error']);
+                    redirect('pengaju/welcome/#about');
                 }
             } else {
                 $picture = '';

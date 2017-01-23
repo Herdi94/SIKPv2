@@ -8,9 +8,9 @@
 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Pendaftaran_model extends CI_Model
+class Daftar_model extends CI_Model
 {
- var $table = 'pengaju';
+    var $table = 'pengaju';
     var $column_order = array('kode_pengajuan','no_identitas','nama','sekolah','jns_pengaju','tgl_mulai','tgl_akhir','photo','status',null);
     var $column_search = array('no_identitas','nama','sekolah','jns_pengaju','status');
     var $order = array('kode_pengajuan'=>'asc');

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Kerja Praktek Online - Admin</title>
+    <title>Kerja Praktek Online - Pembimbing</title>
     <!-- Favicon-->
     <link rel="icon" href="<?php echo base_url('assets/images/jabar.png')?>" type="image/x-icon">
 
@@ -47,7 +47,7 @@
 
 </head>
 
-<body class="theme-pink">
+<body class="theme-deep-purple">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
@@ -70,7 +70,7 @@
         <div class="navbar-header">
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="<?php echo site_url('dashboard/home'); ?>">Kerja Praktek Online - Admin</a>
+            <a class="navbar-brand" href="<?php echo site_url('pembimbing/home'); ?>">Kerja Praktek Online - Pembimbing</a>
         </div>
 
     </div>
@@ -96,11 +96,11 @@
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="<?php echo site_url('dashboard/profile'); ?>"><i class="material-icons">person</i>Profile</a></li>
+                        <li><a href="<?php echo site_url('pembimbing/edit_profile'); ?>"><i class="material-icons">person</i>Profile</a></li>
                         <li role="seperator" class="divider"></li>
-                        <li><a href="<?php echo site_url('dashboard/change_password'); ?>"><i class="material-icons">lock</i>Change Password</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">lock</i>Change Password</a></li>
                         <li role="seperator" class="divider"></li>
-                        <li><a href="<?php echo site_url('dashboard/logout'); ?>"><i class="material-icons">input</i>Sign Out</a></li>
+                        <li><a href="<?php echo site_url('pembimbing/logout'); ?>"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -111,19 +111,13 @@
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="active">
-                    <a href="<?php echo site_url('dashboard/home'); ?>">
+                    <a href="<?php echo site_url('pembimbing/home'); ?>">
                         <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo site_url('dashboard/pembimbing'); ?>">
-                        <i class="material-icons">assignment</i>
-                        <span>Data Pembimbing</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo site_url('dashboard/pendaftaran'); ?>">
+                    <a href="<?php echo site_url('pembimbing/pendaftaran'); ?>">
                         <i class="material-icons">view_list</i>
                         <span>Data Pendaftaran</span>
                     </a>
