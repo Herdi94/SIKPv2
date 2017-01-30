@@ -13,6 +13,21 @@ class Pembimbing_model extends CI_Model
         return $this->db->affected_rows();
     }
 
+    public function save_pass(){
+        $pass = sha1($this->input->post('new'));
+        $data = array(
+            'password' => $pass
+        );
+        $this->db->where('id_pembimbing',$this->session->userdata('id_pembimbing'));
+        $this->db->update('pembimbing',$data);
+    }
+
+    public function cek_old(){
+        $old = sha1($this->input->post('old'));
+        $this->db->where('password',$old);
+        $query = $this->db->get('pembimbing');
+        return $query->result();
+    }
 
 }
 

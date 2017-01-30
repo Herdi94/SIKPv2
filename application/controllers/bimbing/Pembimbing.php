@@ -26,7 +26,7 @@ class Pembimbing extends CI_Controller
         if (!empty($_FILES['photo']['name'])) {
             $config['upload_path'] = 'upload/';
             $config['allowed_types'] = 'jpg|jpeg|png|gif';
-            $config['max_size']             = '5120';
+            $config['max_size']             = '4096';
             $config['file_name'] = $_FILES['photo']['name'];
 
             //Load upload library and initialize configuration

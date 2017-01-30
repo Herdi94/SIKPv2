@@ -15,6 +15,7 @@ class Pembimbing extends CI_Controller
     {
         parent::__construct();
         $this->load->library('session');
+        $this->load->library('form_validation');
     }
 
 public function home(){
@@ -38,6 +39,27 @@ session_write_close();
             'error' => $error
         );
         $this->load->view('pembimbing/login_view', $data);
+    }
+
+    public function save_password(){
+        $this->load->model('pembimbing/pembimbing_model');
+        $this->form_validation->set_rules('new','New','required|alpha_numeric');
+        $this->form_validation->set_rules('re_new','Retype New','required|matches[new]');
+        if($this->form_validation->run()== FALSE){
+            $this->template->load('pembimbing/template','pembimbing/password_view');
+        }
+        else{
+            $cek_old = $this->pembimbing_model->cek_old();
+            if ($cek_old == False){
+                $this->session->set_flashdata('error','Old password not match!');
+                $this->template->load('pembimbing/template','pembimbing/password_view');
+            }
+            else{
+                $this->pembimbing_model->save_pass();
+                $this->session->set_flashdata('error','Your password success to change');
+                redirect('pembimbing/save_password');
+            }
+        }
     }
 
     public function login()

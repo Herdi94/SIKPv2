@@ -34,7 +34,7 @@
                 <div class="info_contact">
                     <h4>Change password</h4>
                     <div class="content">
-                        <form method="post" action="<?=site_url('dashboard/');?>save_password" >
+                        <form method="post" action="<?=site_url('pembimbing/');?>save_password" >
                             <table class="input"><tr><td>Old Password</td><tr>
                                 <tr><td class="input-width"><input type="password" name="old" value="<?php echo set_value('old');?>" required oninvalid="this.setCustomValidity('Masukkan old password.')" oninput="setCustomValidity('')"></td></tr>
                                 <tr><td>New Password</td><tr>

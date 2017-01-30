@@ -15,6 +15,7 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         $this->load->library('session');
+        $this->load->library('form_validation');
     }
 
     public function home()
@@ -42,6 +43,30 @@ class Dashboard extends CI_Controller
 
     }
 
+
+
+    public function save_password()
+    {
+
+        $this->load->model('admin/admin_model');
+        $this->form_validation->set_rules('new','New','required|alpha_numeric');
+        $this->form_validation->set_rules('re_new', 'Retype New', 'required|matches[new]');
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->template->load('admin/template','admin/password_view');
+        }else{
+            $cek_old = $this->admin_model->cek_old();
+            if ($cek_old == False){
+                $this->session->set_flashdata('error','Old password not match!' );
+                $this->template->load('admin/template','admin/password_view');
+            }else{
+                $this->admin_model->save();
+                $this->session->set_flashdata('error','Your password success to change' );
+                redirect('dashboard/save_password');
+            }//end if valid_user
+        }
+    }
+
     public function index($error = NULL)
     {
         $data = array(
@@ -49,6 +74,46 @@ class Dashboard extends CI_Controller
             'error' => $error
         );
         $this->load->view('admin/login_view', $data);
+    }
+
+    public function display_doforget()
+    {
+        $data="";
+        $this->load->view('admin/forgot_password',$data);
+    }
+    public function doforget()
+    {
+        $this->load->helper('url');
+        $this->load->helper('security');
+        $email= $this->input->post('email');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('email','email','required|xss_clean|trim');
+        if ($this->form_validation->run() == FALSE)
+        {
+
+            $this->load->view('admin/forgot_password');
+
+        }
+        else
+        {
+            $q = $this->db->query("select * from admin where email='" . $email . "'");
+            if ($q->num_rows > 0) {
+                $r = $q->result();
+                $user=$r[0];
+                $this->load->helper('string');
+                $password= random_string('alnum',6);
+                $this->db->where('id_admin', $user->id_admin);
+                $this->db->update('admin',array('password'=>$password,'pass_encryption'=>sha1($password)));
+                $this->load->library('email');
+                $this->email->from('contact@example.com', 'sampletest');
+                $this->email->to($user->email);
+                $this->email->subject('Password reset');
+                $this->email->message('You have requested the new password, Here is you new password:'. $password);
+                $this->email->send();
+                $this->session->set_flashdata('message','Password has been reset and has been sent to email');
+                redirect('dashboard/display_doforget');
+            }
+        }
     }
 
     public function login()
@@ -69,7 +134,8 @@ class Dashboard extends CI_Controller
                 'nama' => $row->nama,
                 'nip' => $row->nip,
                 'email' => $row->email,
-                'photo' => $row->photo
+                'photo' => $row->photo,
+                'password' => $row->password
 
             );
 

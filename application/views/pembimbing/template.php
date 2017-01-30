@@ -98,7 +98,7 @@
                     <ul class="dropdown-menu pull-right">
                         <li><a href="<?php echo site_url('pembimbing/edit_profile'); ?>"><i class="material-icons">person</i>Profile</a></li>
                         <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">lock</i>Change Password</a></li>
+                        <li><a href="<?php echo site_url('pembimbing/save_password'); ?>"><i class="material-icons">lock</i>Change Password</a></li>
                         <li role="seperator" class="divider"></li>
                         <li><a href="<?php echo site_url('pembimbing/logout'); ?>"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
