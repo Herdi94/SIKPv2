@@ -135,7 +135,8 @@ class Dashboard extends CI_Controller
                 'nip' => $row->nip,
                 'email' => $row->email,
                 'photo' => $row->photo,
-                'password' => $row->password
+                'password' => $row->password,
+                'level' => $row->level
 
             );
 

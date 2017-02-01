@@ -8,8 +8,8 @@
 if ( !defined('BASEPATH')) exit('No direct script access allowed');
 class Pembimbing_model extends CI_Model{
     var $table = 'pembimbing';
-    var $column_order = array('id_pembimbing','nip','nama','bidang','jabatan','photo','username',null);
-    var $column_search = array('nip','nama','username');
+    var $column_order = array('id_pembimbing','nip','nama_pembimbing','bidang','jabatan','photo','username',null);
+    var $column_search = array('nip','nama_pembimbing','username');
     var $order = array('id_pembimbing'=>'asc');
 
 

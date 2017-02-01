@@ -156,7 +156,7 @@
                             $('[name="id_pembimbing"]').val(data.id_pembimbing);
 
                             $('[name="nip"]').val(data.nip);
-                            $('[name="nama"]').val(data.nama);
+                            $('[name="nama_pembimbing"]').val(data.nama_pembimbing);
                             $('[name="bidang"]').val(data.bidang);
                             $('[name="jabatan"]').val(data.jabatan);
                             $('[name="username"]').val(data.username);
@@ -276,7 +276,7 @@
                                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="nama" name="nama" class="form-control"
+                                                    <input type="text" id="nama_pembimbing" name="nama_pembimbing" class="form-control"
                                                            placeholder="Masukkan nama">
                                                     <span class="help-block"/>
                                                 </div>

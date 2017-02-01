@@ -60,6 +60,7 @@ class Admin extends CI_Controller
         );
 
         $this->admin->update(array('id_admin' => $this->input->post('id_admin')), $data);
+
         echo json_encode(array("status" => TRUE));
     }
 

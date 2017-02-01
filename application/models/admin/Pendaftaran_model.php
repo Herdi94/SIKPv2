@@ -11,14 +11,15 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Pendaftaran_model extends CI_Model
 {
  var $table = 'pengaju';
-    var $column_order = array('kode_pengajuan','no_identitas','nama','sekolah','jns_pengaju','tgl_mulai','tgl_akhir','photo','status',null);
-    var $column_search = array('no_identitas','nama','sekolah','jns_pengaju','status');
-    var $order = array('kode_pengajuan'=>'asc');
+    var $column_order = array('PG.kode_pengajuan','PG.no_identitas','PG.nama','PG.sekolah','PG.jns_pengaju','PG.tgl_mulai','PG.tgl_akhir','PG.surat','PG.status',null);
+    var $column_search = array('PG.no_identitas','PG.nama','PG.sekolah','PG.jns_pengaju','PG.status');
+    var $order = array('PG.kode_pengajuan'=>'asc');
 
     private function _get_datatables_query()
     {
 
-        $this->db->from($this->table);
+        $this->db->from("pengaju PG")
+                 ->join("pembimbing PB","PG.id_pembimbing = PB.id_pembimbing","LEFT");
 
         $i = 0;
 
@@ -87,6 +88,10 @@ class Pendaftaran_model extends CI_Model
         return $query->row();
     }
 
+
+    public function set_ac($ac,$kode_pengajuan,$date,$id_pembimbing){
+        return $this->db->query("UPDATE pengaju SET status = '$ac',tgl_status = '$date', id_pembimbing = '$id_pembimbing' WHERE kode_pengajuan = '$kode_pengajuan'");
+    }
 
 
 }

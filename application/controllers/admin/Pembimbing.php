@@ -22,11 +22,11 @@ class Pembimbing extends CI_Controller{
     }
 
     public function ajax_add(){
-       $this->_validate();
+       $this->validate_add();
 
         $data = array(
             'nip' => $this->input->post('nip'),
-            'nama'=> $this->input->post('nama'),
+            'nama_pembimbing'=> $this->input->post('nama_pembimbing'),
             'bidang' => $this->input->post('bidang'),
             'jabatan' => $this->input->post('jabatan'),
             'username' => $this->input->post('username'),
@@ -47,7 +47,7 @@ class Pembimbing extends CI_Controller{
             $row = array();
             $row[] = $pembimbing->id_pembimbing;
             $row[] = $pembimbing->nip;
-            $row[] = $pembimbing->nama;
+            $row[] = $pembimbing->nama_pembimbing;
             $row[] = $pembimbing->bidang;
             $row[] = $pembimbing->jabatan;
 
@@ -83,11 +83,11 @@ class Pembimbing extends CI_Controller{
     }
 
     public function ajax_update(){
-        $this->_validate();
+        $this->validate_update();
 
         $data = array(
             'nip' => $this->input->post('nip'),
-            'nama'=> $this->input->post('nama'),
+            'nama_pembimbing'=> $this->input->post('nama_pembimbing'),
             'bidang' => $this->input->post('bidang'),
             'jabatan' => $this->input->post('jabatan'),
             'username' => $this->input->post('username')
@@ -108,7 +108,7 @@ class Pembimbing extends CI_Controller{
         echo json_encode(array("status"=> TRUE));
     }
 
-    private function _validate(){
+    private function validate_add(){
         $data = array();
         $data['error_string'] = array();
         $data['inputerror'] = array();
@@ -120,9 +120,59 @@ class Pembimbing extends CI_Controller{
             $data['error_string'][] = 'NIP is required';
             $data['status'] = FALSE;
         }
-        if($this->input->post('nama') == '')
+        if($this->input->post('nama_pembimbing') == '')
         {
-            $data['inputerror'][] = 'nama';
+            $data['inputerror'][] = 'nama_pembimbing';
+            $data['error_string'][] = 'Nama is required';
+            $data['status'] = FALSE;
+        }
+        if($this->input->post('bidang') == '')
+        {
+            $data['inputerror'][] = 'bidang';
+            $data['error_string'][] = 'Bidang is required';
+            $data['status'] = FALSE;
+        }
+        if($this->input->post('jabatan') == '')
+        {
+            $data['inputerror'][] = 'jabatan';
+            $data['error_string'][] = 'Jabatan is required';
+            $data['status'] = FALSE;
+        }
+        if($this->input->post('username') == '')
+        {
+            $data['inputerror'][] = 'username';
+            $data['error_string'][] = 'Username is required';
+            $data['status'] = FALSE;
+        }
+
+        if($this->input->post('password') == '')
+        {
+            $data['inputerror'][] = 'password';
+            $data['error_string'][] = 'Password is required';
+            $data['status'] = FALSE;
+        }
+
+        if($data['status'] == FALSE){
+            echo json_encode($data);
+            exit();
+        }
+    }
+
+    private function validate_update(){
+        $data = array();
+        $data['error_string'] = array();
+        $data['inputerror'] = array();
+        $data['status'] = TRUE;
+
+        if($this->input->post('nip') == '')
+        {
+            $data['inputerror'][] = 'nip';
+            $data['error_string'][] = 'NIP is required';
+            $data['status'] = FALSE;
+        }
+        if($this->input->post('nama_pembimbing') == '')
+        {
+            $data['inputerror'][] = 'nama_pembimbing';
             $data['error_string'][] = 'Nama is required';
             $data['status'] = FALSE;
         }

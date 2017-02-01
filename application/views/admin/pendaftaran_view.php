@@ -138,72 +138,6 @@
                 <!--end date picker-->
 
 
-                function disetujui()
-                {
-
-                    //$("#btnSetuju").text("Ditolak");
-
-
-                    if ($("#btnSetuju").text("Ditolak"))
-                    {
-                        $("#btnSetuju").text("ditolak");
-                    }
-
-                    if ($("#btnSetuju").text("Ditolak"))
-                    {
-                        $("#btnSetuju").text("diterima");
-                    }
-
-                    //$("#btnSetuju").text("Diterima");
-
-                    /*
-                    $('#btnSetuju').text('saving...'); //change button text
-                    $('#btnSetuju').attr('disabled', false); //set button disable
-
-                    var url;
-
-                    /*
-                    if (save_method == 'edit') {
-                        url = "<?php // echo site_url('admin/admin/ajax_update_profile')?>";
-                    }
-*/
-                    // ajax adding data to database
-/*
-                    var formData = new FormData($('#form')[0]);
-                    $.ajax({
-                        url: url,
-                        type: "POST",
-                        data: formData,
-                        contentType: false,
-                        processData: false,
-                        dataType: "JSON",
-                        success: function (data) {
-
-                            if (data.status)
-                            {
-                               // $('#modal_form').modal('hide');
-                            }
-
-                            $('#btnSetuju').text('save'); //change button text
-                            $('#btnSetuju').attr('disabled', false); //set button enable
-
-
-                        },
-
-                        $('#btnSetuju').text('save'); //change button text
-                    $('#btnSetuju').attr('disabled', false); //set button enable
-
-
-                    });
-*/
-                }
-
-
-
-
-
-
-
                 function detail_pendaftaran(kode_pengajuan)
                 {
                     //save_method = 'update';
@@ -249,9 +183,9 @@
 
                             $('#photo-preview').show(); // show photo preview modal
 
-                            if(data.photo)
+                            if(data.surat)
                             {
-                                $('#photo-preview div').html('<img src="'+base_url+'upload/'+data.photo+'" class="img-responsive" width=50%>'); // show photo
+                                $('#photo-preview div').html('<img src="'+base_url+'upload/'+data.surat+'" class="img-responsive" width=50%>'); // show photo surat
                             }
                             else
                             {

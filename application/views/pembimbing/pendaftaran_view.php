@@ -35,6 +35,7 @@
                         <button class="btn btn-default" onclick="reload_table()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
                         <br />
                         <br />
+                        <div class="table-responsive">
                         <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                             <tr>
@@ -46,8 +47,6 @@
                                 <th>Awal KP</th>
                                 <th>Akhir KP</th>
                                 <th>Status</th>
-                                <!-- status
-                                --<th>Disetujui</th>-->
                                 <th width="60">Surat</th>
                                 <th style="width:50px;">Aksi</th>
                             </tr>
@@ -56,12 +55,13 @@
                             </tbody>
 
                         </table>
+                            </div>
                     </div>
                 </div>
             </div>
 
 
-            <script src="<?php echo base_url('assets/startbootstrap_freelancer/js/jquery-2.1.4.min.js')?>"></script><!--penting-->
+            <script src="<?php echo base_url('assets/startbootstrap_freelancer/vendor/jquery/jquery.min.js')?>"></script><!--penting-->
             <script src="<?php echo base_url('assets/datatables/media/js/jquery.dataTables.min.js')?>"></script><!--penting-->
             <script src="<?php echo base_url('assets/datatables/media/js/dataTables.bootstrap.js')?>"></script>
             <!--            <script src="--><?php //echo base_url('assets/bootstrap-datepicker1/js/bootstrap-datepicker.min.js')?><!--"></script>-->
@@ -140,6 +140,67 @@
 
 
 
+                function disetujui(kode_pengajuan)
+                {
+                    status = 'Diterima';
+                    id_pembimbing = "<?= $this->session->userdata('id_pembimbing')?>";
+                   //$(function(){
+
+                        $.ajax({
+                            type:"POST",
+                            url: "<?= base_url('admin/pendaftaran/action_status'); ?>",
+                            data : "ac=Diterima" + "&kode_pengajuan=" + kode_pengajuan + "&id_pembimbing=" +id_pembimbing,
+                            success : function(response){
+                                //console.log(response);
+                                reload_table();
+                                alert("Pendaftaran Disetujui");
+                            },
+                            error: function (jqXHR, status, error){
+                                //console.log(error);
+                                reload_table();
+                                alert("Pendaftaran Disetujui");
+                            }
+                        });
+                        /*$.post("<?= base_url()?>admin/pendaftaran/action_setuju", {"kode_pengajuan" : kode_pengajuan,"status" : status})
+                            .done(function (data){
+                                console.log(data);
+                                if(data){
+                                    reload_table();
+                                    alert("Pendaftaran Disetujui");
+                                }
+                                else{
+                                    reload_table();
+                                    alert("error")
+                                }
+
+
+                            })*/
+                    //})
+
+
+                }
+
+                function ditolak(kode_pengajuan){
+
+                    status='Ditolak';
+                    id_pembimbing = "<?= $this->session->userdata('id_pembimbing')?>";
+                    $.ajax({
+                        type:"POST",
+                        url:"<?=base_url('admin/pendaftaran/action_status')?>",
+                        data: "ac=Ditolak" +"&kode_pengajuan=" +kode_pengajuan +"&id_pembimbing=" +id_pembimbing,
+                        success: function(response){
+                            reload_table();
+                            alert("Pendaftaran Ditolak");
+                        },
+                        error:function(jqXHR,status,error){
+                            reload_table();
+                            alert("Pendaftaran Ditolak");
+                        }
+                    });
+
+                }
+
+
 
 
 
@@ -188,9 +249,9 @@
 
                             $('#photo-preview').show(); // show photo preview modal
 
-                            if(data.photo)
+                            if(data.surat)
                             {
-                                $('#photo-preview div').html('<img src="'+base_url+'upload/'+data.photo+'" class="img-responsive" width=50%>'); // show photo
+                                $('#photo-preview div').html('<img src="'+base_url+'upload/'+data.surat+'" class="img-responsive" width=50%>'); // show photo surat
                             }
                             else
                             {

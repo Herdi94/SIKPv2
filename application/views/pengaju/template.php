@@ -15,6 +15,9 @@
     <!--jquery-->
     <script src="<?php echo base_url('assets/startbootstrap_freelancer/js/jquery-3.1.1.min.js') ?>"></script>
 
+
+
+
     <!--start datepicker -->
 
     <link rel="stylesheet"
@@ -440,7 +443,7 @@ c. 3 bulan contoh : 2016-10-10 - 2017-01-10<br>', ''); ?>
 
                                             <input type="file"
                                                    onchange="tampilkanPreview(this,'preview')"
-                                                   name="photo"
+                                                   name="surat"
                                                 />
                                             <?php
                                             if ($this->session->flashdata('error')) {

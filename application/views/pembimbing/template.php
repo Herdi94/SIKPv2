@@ -90,7 +90,7 @@
             </div>
             <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php
-                        echo $this->session->userdata('nama') ?></div>
+                        echo $this->session->userdata('nama_pembimbing') ?></div>
 
 
                 <div class="btn-group user-helper-dropdown">

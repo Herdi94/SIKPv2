@@ -53,7 +53,7 @@ class Pembimbing extends CI_Controller
         $data = array(
 
             'nip' => $this->input->post('nip'),
-            'nama' => $this->input->post('nama'),
+            'nama_pembimbing' => $this->input->post('nama_pembimbing'),
             'bidang' => $this->input->post('bidang'),
             'jabatan' => $this->input->post('jabatan'),
             'username' => $this->input->post('username'),
@@ -78,9 +78,9 @@ class Pembimbing extends CI_Controller
             $data['error_string'][] = 'NIP is required';
             $data['status'] = FALSE;
         }
-        if($this->input->post('nama') == '')
+        if($this->input->post('nama_pembimbing') == '')
         {
-            $data['inputerror'][] = 'nama';
+            $data['inputerror'][] = 'nama_pembimbing';
             $data['error_string'][] = 'Nama is required';
             $data['status'] = FALSE;
         }

@@ -78,12 +78,13 @@ session_write_close();
 
                 'id_pembimbing'=> $row->id_pembimbing,
                 'username' => $row->username,
-                'nama' => $row->nama,
+                'nama_pembimbing' => $row->nama_pembimbing,
                 'nip' => $row->nip,
                 'bidang' => $row->bidang,
                 'jabatan' => $row->jabatan,
                 'email' => $row->email,
-                'photo' => $row->photo
+                'photo' => $row->photo,
+                'level' => $row->level
 
             );
 

@@ -40,11 +40,11 @@ class Welcome extends CI_Controller
 
 
             //Check whether user upload picture
-            if (!empty($_FILES['photo']['name'])) {
+            if (!empty($_FILES['surat']['name'])) {
                 $config['upload_path'] = 'upload/';
                 $config['allowed_types'] = 'jpg|jpeg|png|gif';
                 $config['max_size']             = '4096';
-                $config['file_name'] = $_FILES['photo']['name'];
+                $config['file_name'] = $_FILES['surat']['name'];
 
                 //load form validation
                 $this->load->library('form_validation');
@@ -53,7 +53,7 @@ class Welcome extends CI_Controller
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
 
-                if ($this->upload->do_upload('photo')) {
+                if ($this->upload->do_upload('surat')) {
                     $uploadData = $this->upload->data();
                     $picture = $uploadData['file_name'];
                 } else {
@@ -78,7 +78,7 @@ class Welcome extends CI_Controller
                 'sekolah' => $this->input->post('sekolah'),
                 'tgl_mulai' => $this->input->post('tgl_mulai'),
                 'tgl_akhir' => $this->input->post('tgl_akhir'),
-                'photo' => $picture
+                'surat' => $picture
             );
 
         //sending email

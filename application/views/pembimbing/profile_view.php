@@ -45,7 +45,7 @@
                     </tr>
 
                     <tr>
-                        <td width="10%">Nama</td><td><?php echo $this->session->userdata('nama') ?></td>
+                        <td width="10%">Nama</td><td><?php echo $this->session->userdata('nama_pembimbing') ?></td>
                     </tr>
 
                     <tr>
@@ -142,13 +142,7 @@
                 if (data.status) //if success close modal and reload profile table
                 {
                     $('#modal_form').modal('hide');
-                    <?php
 
-
-                    //destroy session
-                   // $this->session->sess_destroy();
-                    //$this->session->sess_start();
-                    ?>
                 }
                 else {
                     for (var i = 0; i < data.inputerror.length; i++) {
@@ -254,8 +248,8 @@
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" id="nama" name="nama"
-                                                       value="<?php echo $this->session->userdata('nama') ?>" class="form-control"
+                                                <input type="text" id="nama_pembimbing" name="nama_pembimbing"
+                                                       value="<?php echo $this->session->userdata('nama_pembimbing') ?>" class="form-control"
                                                        placeholder="Masukkan nama">
                                                 <span class="help-block"/>
                                             </div>
